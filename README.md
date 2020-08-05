@@ -1,7 +1,7 @@
 # CellModeller Docker Container
 [![Docker Hub](https://img.shields.io/docker/v/avimanyu786/cellmodeller/4.3.1?label=Docker%20Hub)](https://hub.docker.com/r/avimanyu786/cellmodeller)
 
-[CellModeller](https://haselofflab.github.io/CellModeller) is a multicellular modelling framework created by Tim Rudge, PJ Steiner, and Jim Haseloff, University of Cambridge. This docker hub image an attempt to simplify the process of deploying the graphical user interface of CellModeller with a very few steps. The image has been built by extensively modifying the nvidia/opengl ubuntu 18.04 docker hub image with several other essential packages. Currently this works only with NVIDIA GPUs but AMD GPU support is also a work in progress.
+[CellModeller](https://haselofflab.github.io/CellModeller) is a multicellular modelling framework created by Tim Rudge, PJ Steiner, and Jim Haseloff, University of Cambridge. This docker hub image is an attempt to simplify the process of deploying the graphical user interface of CellModeller with a very few steps. The image has been built by extensively modifying the nvidia/opengl ubuntu 18.04 docker hub image with several other essential packages. Currently this works only with NVIDIA GPUs but AMD GPU support is also a work in progress.
 
 ## 1. Prerequisites
 
@@ -58,7 +58,7 @@ In case you have more than one GPU on your system and want to run CellModeller o
 
 ## 4. Exiting the CellModeller Container and resetting permissions
 
-When you want to quit the session, simple type `exit` in the container's terminal and you will come back to your host terminal session.
+When you want to quit the session, simply type `exit` in the container's terminal and you will come back to your host terminal session.
 
 Remove the previously allotted permissions with:
 
