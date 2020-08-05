@@ -1,5 +1,6 @@
-#Please note that the final image was committed with several changes to make it an operational 
-#CellModeller container after this Dockerfile was used to build the initial image.
+#Please note that the final image was committed with several changes to make it 
+#an operational CellModeller container after this Dockerfile was used to build the initial image.
+#For more details, see https://github.com/HaseloffLab/CellModeller/issues/23#issuecomment-669260388
 FROM nvidia/opengl:1.0-glvnd-runtime-ubuntu18.04
 RUN apt-get update \
   && apt-get install -y -qq --no-install-recommends \
