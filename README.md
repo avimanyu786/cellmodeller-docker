@@ -5,7 +5,7 @@
 
 ## 1. Prerequisites
 
-Make sure you have installed the Nvidia Drivers(>390) on your Linux system. [Here](https://linuxhint.com/install-nvidia-drivers-linux/) is a distribution wise coverage. You would also require the Nvidia Runtime Container Toolkit. The installation steps are described [here](https://github.com/NVIDIA/nvidia-docker) based on different distros.
+Make sure you have installed the Nvidia Drivers(>=v390) on your Linux system. [Here](https://linuxhint.com/install-nvidia-drivers-linux/) is a distribution wise coverage. You would also require the Nvidia Runtime Container Toolkit. The installation steps are described [here](https://github.com/NVIDIA/nvidia-docker) based on different distros.
 
 Install Docker. On Ubuntu, you can run the following steps:
 
