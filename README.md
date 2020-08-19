@@ -5,6 +5,8 @@
 
 ## 1. Prerequisites
 
+Make sure you have installed the Nvidia Drivers(>390) on your Linux system. [Here](https://linuxhint.com/install-nvidia-drivers-linux/) is a distribution wise coverage. You would also require the Nvidia Runtime Container Toolkit. The installation steps are described [here](https://github.com/NVIDIA/nvidia-docker) based on different distros.
+
 Install Docker. On Ubuntu, you can run the following steps:
 
 `sudo apt update`
@@ -28,9 +30,6 @@ Make sure you can run Docker as non-root user:
 Run Docker on every boot so you wouldn't need to do that whenever you run CellModeller:
 
 `sudo systemctl enable docker`
-
-Make sure you have installed the Nvidia Drivers on your Linux system. [Here](https://linuxhint.com/install-nvidia-drivers-linux/) is a distribution wise coverage. You would also require the Nvidia Runtime Container Toolkit. The installation steps are described [here](https://github.com/NVIDIA/nvidia-docker) based on different distros.
-
 
 ## 2. Create a directory for the results of your simulations
 
