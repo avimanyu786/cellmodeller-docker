@@ -49,6 +49,8 @@ With the following command you can now directly run the GUI in one go:
 
 `docker run --rm -it --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/cellmodeller/data:/data --name cmgui avimanyu786/cellmodeller:4.3.1`
 
+To check the dev branch, use the `dev` tag instead of `4.3.1` in the above command.
+
 The first run will take some time as it would download the new image. If you close the GUI window after it finally launches, running the `cmgui` command in the container's terminal can bring it up again.
 
 For batch mode, use `python CellModeller/Scripts/batch.py <model file name>`. You can launch them from `/data` through the container which is nothing but `/home/username/cellmodeller/data` on your host system.
