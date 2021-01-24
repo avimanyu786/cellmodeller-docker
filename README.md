@@ -47,7 +47,7 @@ Permit your Linux username on the local machine to connect to the X windows disp
 
 With the following command you can now directly run the GUI in one go:
 
-`docker run --rm -it --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/cellmodeller/data:/data --name cmgui avimanyu786/cellmodeller:4.3.1`
+`docker run --rm -it --gpus all -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -v ~/cellmodeller/data:/data --name cmgui avimanyu786/cellmodeller:4.3.1`
 
 To check the dev branch, use the `dev` tag instead of `4.3.1` in the above command.
 
