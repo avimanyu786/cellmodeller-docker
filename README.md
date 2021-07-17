@@ -15,7 +15,7 @@ Make sure you have installed the Nvidia Drivers(>=v390) on your Linux system. [H
 
 ### AMD GPUs
 
-Download the Radeon™ Software for Linux® Driver for Ubuntu from [this page](https://www.amd.com/en/support/graphics/amd-radeon-2nd-generation-vega/amd-radeon-2nd-generation-vega/amd-radeon-vii). The installation steps are described [here](https://amdgpu-install.readthedocs.io/en/latest/) for different Linux distributions. On your host operating system, use the `amdgpu-install` [script](https://amdgpu-install.readthedocs.io/en/latest/install-script.html)  to install the AMDGPU Open Source drivers both for hardware older or newer than Vega 10. The AMD GPU docker image has been built for both.
+Download the Radeon™ Software for Linux® Driver for Ubuntu from [this page](https://www.amd.com/en/support/). The installation steps are described [here](https://amdgpu-install.readthedocs.io/en/latest/) for different Linux distributions. On your host operating system, use the `amdgpu-install` [script](https://amdgpu-install.readthedocs.io/en/latest/install-script.html)  to install the AMDGPU Open Source drivers both for hardware older or newer than Vega 10. The AMD GPU docker image has been built for both.
 
 Install Docker. On Ubuntu, you can run the following steps:
 
