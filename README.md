@@ -1,5 +1,5 @@
 # CellModeller Docker Containers
-[![Docker Hub](https://img.shields.io/docker/v/avimanyu786/cellmodeller/4.3.1?label=Docker%20Hub)](https://hub.docker.com/r/avimanyu786/cellmodeller)
+[![Docker Hub](https://img.shields.io/docker/v/avimanyu786/cellmodeller?label=Docker%20Hub)](https://hub.docker.com/r/avimanyu786/cellmodeller)
 
 CellModeller is a multicellular modelling framework created by Tim Rudge, PJ Steiner, and Jim Haseloff, University of Cambridge. These Docker Hub images are an attempt to simplify the process of deploying the graphical user interface of CellModeller within a very few steps. The images have been built by extensively modifying Ubuntu 18.04 based Docker Hub images with several other essential packages. This approach works with both NVIDIA and AMD GPUs.
 
