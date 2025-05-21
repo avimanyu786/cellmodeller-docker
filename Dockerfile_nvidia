@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y upgrade \
   && apt-get install -y -qq --no-install-recommends \
@@ -21,13 +21,29 @@ RUN apt-get update && apt-get -y upgrade \
     ca-certificates \
     && rm -rf /var/lib/apt/lists/*
             
-RUN pip install pyqt5 cupy-cuda12x;
+ENV PATH="/root/miniconda3/bin:${PATH}"
+ARG PATH="/root/miniconda3/bin:${PATH}"
+RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh; \
+    mkdir /root/.conda; \
+    bash Miniconda3-latest-Linux-x86_64.sh -b; \
+    rm -f Miniconda3-latest-Linux-x86_64.sh; \
+    echo "Successfully installed " conda --version; \
+    conda init bash; \
+    . /root/.bashrc; \
+    conda create -n cellmodeller; \
+    conda activate cellmodeller; \
+    conda install python=3.8 pip; \
+    pip install pyqt5;
 
 WORKDIR /
-RUN git clone https://github.com/HaseloffLab/CellModeller.git; \
+RUN conda init bash; \
+    . /root/.bashrc; \ 
+    conda activate cellmodeller; \ 
+    git clone https://github.com/HaseloffLab/CellModeller.git; \
     cd CellModeller && pip install -e .;
     
-RUN echo 'python /CellModeller/Scripts/CellModellerGUI.py \n\
+RUN echo 'conda activate cellmodeller \n\
+python /CellModeller/Scripts/CellModellerGUI.py \n\
 alias cmgui="python /CellModeller/Scripts/CellModellerGUI.py"' >> /root/.bashrc
 
 RUN mkdir -p /etc/OpenCL/vendors && \
@@ -35,4 +51,3 @@ RUN mkdir -p /etc/OpenCL/vendors && \
 RUN ln -s /usr/lib/x86_64-linux-gnu/libOpenCL.so.1 /usr/lib/libOpenCL.so
 ENV NVIDIA_VISIBLE_DEVICES all
 ENV NVIDIA_DRIVER_CAPABILITIES graphics,utility,compute
-ENTRYPOINT ["python", "/CellModeller/Scripts/CellModellerGUI.py"]
